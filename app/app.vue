@@ -1,14 +1,16 @@
 <script setup lang="ts">
-import { Nav, SmoothScroll, Background, Cursor, CursorContainer } from '@/components/app'
+import { Nav, SmoothScroll, Cursor, CursorContainer } from '@/components/app'
+const { t } = useI18n()
 
-const localePath = useLocalePath()
+useSeoMeta({
+  title: () => t('app.title'),
+  description: () => t('app.description')
+})
 </script>
 
 <template>
   <div class="h-screen">
     <SmoothScroll>
-      <!-- <Background src="/bg.jpg" /> -->
-
       <UApp>
         <NuxtLayout class="relative">
           <header v-backdrop class="flex justify-between items-center px-6 sticky top-0 z-10">
@@ -16,8 +18,7 @@ const localePath = useLocalePath()
               <div class="flex items-center">
                 <img class="h-20 w-20 rounded-full" src="/avatar.png" alt="avatar" />
                 <span class="font-bold first-letter:text-4xl first-letter:uppercase">{{
-                  // $t(`nav.${localePath(useRoute().name?.toString().replace('/', '') || '')}`)
-                  1
+                  t('app.title')
                 }}</span>
               </div>
             </NuxtLink>

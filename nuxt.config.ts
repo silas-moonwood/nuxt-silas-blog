@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/color-mode',
     'lenis/nuxt',
-    'nuxt-gtag'
+    'nuxt-gtag',
+    '@vueuse/nuxt'
   ],
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },

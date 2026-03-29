@@ -9,7 +9,7 @@ export const useNav = () => {
       label: t(`nav.${item.key}`)
     }))
   )
-  console.log('nav', nav.value)
+
   return {
     nav
   }

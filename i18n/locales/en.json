@@ -3,15 +3,8 @@
   "zh": "Chinese",
   "language": "Language",
   "app": {
-    "title": "Silas's Personal Blog",
-    "description": "A blog about programming, technology, and life.",
-    "router": {
-      "home": "Home",
-      "blog": "Blog",
-      "about": "About",
-      "projects": "Projects",
-      "me": "Me"
-    }
+    "title": "Silas's Little Nest",
+    "description": "A blog about programming, technology, and life."
   },
   "nav": {
     "home": "Home",

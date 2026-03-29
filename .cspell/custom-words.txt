@@ -4,3 +4,4 @@ nprogress
 nuxt
 entypo
 lucide
+vueuse
