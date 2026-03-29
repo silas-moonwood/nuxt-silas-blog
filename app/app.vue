@@ -6,7 +6,8 @@ import {
   Cursor,
   CursorContainer,
   Logo,
-  Header
+  Header,
+  LocaleSelect
 } from '@/components/app'
 import { useDevice } from '@/composables'
 
@@ -26,7 +27,9 @@ useSeoMeta({
           <Header>
             <Logo />
             <NavMobile v-if="isMobile" />
-            <Nav v-else />
+            <Nav v-else>
+              <LocaleSelect />
+            </Nav>
           </Header>
           <Cursor />
           <main class="pb-4">
