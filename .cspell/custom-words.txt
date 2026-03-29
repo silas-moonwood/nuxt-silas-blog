@@ -1,0 +1,6 @@
+nuxtjs
+gtag
+nprogress
+nuxt
+entypo
+lucide

@@ -1,11 +1,27 @@
 {
-  "words": [
-    "nuxt",
-    "nuxtjs",
-    "lucide"
+  "import": [
+    "@cspell/dict-lorem-ipsum/cspell-ext.json"
   ],
-  "ignoreWords": [
-    "**/node_modules/*",
-    "**/.nuxt/*"
+  "caseSensitive": false,
+  "dictionaries": [
+    "custom-words"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "custom-words",
+      "path": "./.cspell/custom-words.txt",
+      "addWords": true
+    }
+  ],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/coverage/**",
+    "**/out/**",
+    "**/public/**",
+    ".**/.git/**",
+    ".gitignore",
+    "**-lock.**"
   ]
 }

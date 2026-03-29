@@ -23,7 +23,9 @@
     "vue-router": "^5.0.4"
   },
   "devDependencies": {
+    "@cspell/dict-lorem-ipsum": "^4.0.5",
     "@types/nprogress": "^0.2.3",
+    "cspell": "^9.7.0",
     "nuxt-icon": "1.0.0-beta.7"
   }
 }
