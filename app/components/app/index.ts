@@ -1,5 +1,8 @@
 export { default as Nav } from './Nav.vue'
+export { default as NavMobile } from './NavMobile.vue'
 export { default as SmoothScroll } from './SmoothScroll.vue'
 export { default as Background } from './Background.vue'
 export { default as Cursor } from './Cursor.vue'
 export { default as CursorContainer } from './CursorContainer.vue'
+export { default as Logo } from './Logo.vue'
+export { default as Header } from './Header.vue'

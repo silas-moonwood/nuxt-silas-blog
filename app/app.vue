@@ -1,7 +1,17 @@
 <script setup lang="ts">
-import { Nav, SmoothScroll, Cursor, CursorContainer } from '@/components/app'
-const { t } = useI18n()
+import {
+  Nav,
+  NavMobile,
+  SmoothScroll,
+  Cursor,
+  CursorContainer,
+  Logo,
+  Header
+} from '@/components/app'
+import { useDevice } from '@/composables'
 
+const { t } = useI18n()
+const { isMobile } = useDevice()
 useSeoMeta({
   title: () => t('app.title'),
   description: () => t('app.description')
@@ -13,17 +23,11 @@ useSeoMeta({
     <SmoothScroll>
       <UApp>
         <NuxtLayout class="relative">
-          <header v-backdrop class="flex justify-between items-center px-6 sticky top-0 z-10">
-            <NuxtLink to="/">
-              <div class="flex items-center">
-                <img class="h-20 w-20 rounded-full" src="/avatar.png" alt="avatar" />
-                <span class="font-bold first-letter:text-4xl first-letter:uppercase">{{
-                  t('app.title')
-                }}</span>
-              </div>
-            </NuxtLink>
-            <Nav />
-          </header>
+          <Header>
+            <Logo />
+            <NavMobile v-if="isMobile" />
+            <Nav v-else />
+          </Header>
           <Cursor />
           <main class="pb-4">
             <CursorContainer>

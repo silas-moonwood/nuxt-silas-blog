@@ -5,3 +5,5 @@ nuxt
 entypo
 lucide
 vueuse
+USlideover
+Slideover
