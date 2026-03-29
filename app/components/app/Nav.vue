@@ -4,6 +4,8 @@ import type { LocaleObject } from '@nuxtjs/i18n'
 const { locale, locales, setLocale } = useI18n()
 const localePath = useLocalePath()
 
+const { nav } = useNav()
+
 const languageItems = ref(
   locales.value.map((locale: LocaleObject) => ({
     label: locale.name,
@@ -13,29 +15,6 @@ const languageItems = ref(
 )
 
 const currentLocale = ref(languageItems.value.find((item) => item.value === locale.value))
-
-const navItems = ref([
-  {
-    name: 'home',
-    path: '/'
-  },
-  {
-    name: 'blog',
-    path: '/blog'
-  },
-  {
-    name: 'projects',
-    path: '/projects'
-  },
-  {
-    name: 'about',
-    path: '/about'
-  },
-  {
-    name: 'me',
-    path: '/me'
-  }
-])
 
 watchEffect(() => {
   setLocale(currentLocale.value!.value)
@@ -55,10 +34,8 @@ const toggleColorMode = () => {
       v-model="currentLocale"
       :items="languageItems"
     />
-    <template v-for="item in navItems" :key="item.path">
-      <NuxtLink :to="localePath(item.path)" class="cursor-pointer">{{
-        $t(`nav.${item.name}`)
-      }}</NuxtLink>
+    <template v-for="item in nav" :key="item.path">
+      <NuxtLink :to="localePath(item.path)" class="cursor-pointer">{{ item.label }}</NuxtLink>
     </template>
     <Icon name="entypo:light-up" class="cursor-pointer" @click="toggleColorMode"></Icon>
   </nav>

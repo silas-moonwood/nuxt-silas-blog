@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'lenis/nuxt',
     'nuxt-gtag'
-  ],  
+  ],
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
@@ -49,7 +49,12 @@ export default defineNuxtConfig({
     }
   },
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: [
+        'nprogress' // CJS
+      ]
+    }
   },
 
   app: {

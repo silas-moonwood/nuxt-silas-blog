@@ -16,7 +16,8 @@ const localePath = useLocalePath()
               <div class="flex items-center">
                 <img class="h-20 w-20 rounded-full" src="/avatar.png" alt="avatar" />
                 <span class="font-bold first-letter:text-4xl first-letter:uppercase">{{
-                  $t(`nav.${localePath(useRoute().name?.toString().replace('/', '') || '')}`)
+                  // $t(`nav.${localePath(useRoute().name?.toString().replace('/', '') || '')}`)
+                  1
                 }}</span>
               </div>
             </NuxtLink>

@@ -2,6 +2,17 @@
   "en": "English",
   "zh": "Chinese",
   "language": "Language",
+  "app": {
+    "title": "Silas's Personal Blog",
+    "description": "A blog about programming, technology, and life.",
+    "router": {
+      "home": "Home",
+      "blog": "Blog",
+      "about": "About",
+      "projects": "Projects",
+      "me": "Me"
+    }
+  },
   "nav": {
     "home": "Home",
     "blog": "Blog",
