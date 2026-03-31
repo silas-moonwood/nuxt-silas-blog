@@ -1,5 +1,4 @@
-export { default as Nav } from './Nav.vue'
-export { default as NavMobile } from './NavMobile.vue'
+// single components not grouped in a folder
 export { default as SmoothScroll } from './SmoothScroll.vue'
 export { default as Background } from './Background.vue'
 export { default as Cursor } from './Cursor.vue'
@@ -7,3 +6,7 @@ export { default as CursorContainer } from './CursorContainer.vue'
 export { default as Logo } from './Logo.vue'
 export { default as Header } from './Header.vue'
 export { default as LocaleSelect } from './LocaleSelect.vue'
+export { default as Footer } from './Footer.vue'
+
+// Nav components and composables function
+export * from './nav'

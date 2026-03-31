@@ -2,23 +2,33 @@
 import {
   Nav,
   NavMobile,
+  NavMobileList,
   SmoothScroll,
   Cursor,
   CursorContainer,
   Logo,
   Header,
-  LocaleSelect
-} from '@/components/app'
+  LocaleSelect,
+  Footer
+} from '~/components'
 import { useDevice } from '@/composables'
+import { useNavMobileProvider, useNavMobileState } from '~/components/nav/useNavMobile'
 
 const { t } = useI18n()
 const { isMobile } = useDevice()
+
 useSeoMeta({
   title: () => t('app.title'),
   description: () => t('app.description')
 })
-</script>
 
+useNavMobileProvider()
+const { open } = useNavMobileState()!
+
+const handleNavMobileListItemClick = () => {
+  open.value = false
+}
+</script>
 <template>
   <div class="h-screen">
     <SmoothScroll>
@@ -26,18 +36,28 @@ useSeoMeta({
         <NuxtLayout class="relative">
           <Header>
             <Logo />
-            <NavMobile v-if="isMobile" />
-            <Nav v-else>
-              <LocaleSelect />
-            </Nav>
+            <ClientOnly>
+              <NavMobile v-if="isMobile">
+                <template #body>
+                  <NavMobileList @click="handleNavMobileListItemClick" />
+                </template>
+              </NavMobile>
+              <Nav v-else>
+                <template #right>
+                  <UColorModeSwitch />
+                </template>
+                <template #left>
+                  <LocaleSelect />
+                </template>
+              </Nav>
+            </ClientOnly>
           </Header>
-          <Cursor />
+          <!-- <Cursor /> -->
           <main class="pb-4">
-            <CursorContainer>
-              <NuxtPage />
-            </CursorContainer>
+            <NuxtPage />
           </main>
         </NuxtLayout>
+        <Footer />
       </UApp>
     </SmoothScroll>
   </div>

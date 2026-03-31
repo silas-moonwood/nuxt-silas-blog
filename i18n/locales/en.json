@@ -2,6 +2,10 @@
   "en": "English",
   "zh": "Chinese",
   "language": "Language",
+  "colorMode": {
+    "light": "Light",
+    "dark": "Dark"
+  },
   "app": {
     "title": "Silas's Little Nest",
     "description": "A blog about programming, technology, and life."
