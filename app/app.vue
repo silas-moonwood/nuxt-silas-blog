@@ -1,15 +1,15 @@
 <script setup lang="ts">
+import { useDevice } from '@/composables'
 import {
+  Footer,
+  Header,
+  LocaleSelect,
+  Logo,
   Nav,
   NavMobile,
   NavMobileList,
   SmoothScroll,
-  Logo,
-  Header,
-  LocaleSelect,
-  Footer
 } from '~/components'
-import { useDevice } from '@/composables'
 import { useNavMobileProvider, useNavMobileState } from '~/components/nav/useNavMobile'
 
 const { t } = useI18n()
@@ -17,16 +17,17 @@ const { isMobile } = useDevice()
 
 useSeoMeta({
   title: () => t('app.title'),
-  description: () => t('app.description')
+  description: () => t('app.description'),
 })
 
 useNavMobileProvider()
-const { open } = useNavMobileState()!
+const { open } = useNavMobileState() || { open: ref(false) }
 
-const handleNavMobileListItemClick = () => {
+function handleNavMobileListItemClick() {
   open.value = false
 }
 </script>
+
 <template>
   <div class="h-screen">
     <SmoothScroll>

@@ -2,11 +2,14 @@
 const localePath = useLocalePath()
 const { nav } = useNav()
 </script>
+
 <template>
   <nav class="flex items-center gap-8 text-lg">
     <slot name="left" />
     <template v-for="item in nav" :key="item.path">
-      <NuxtLink :to="localePath(item.path)" class="cursor-pointer">{{ item.label }}</NuxtLink>
+      <NuxtLink :to="localePath(item.path)" class="cursor-pointer">
+        {{ item.label }}
+      </NuxtLink>
     </template>
     <slot name="right" />
   </nav>

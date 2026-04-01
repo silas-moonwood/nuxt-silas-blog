@@ -3,7 +3,9 @@
 <template>
   <UFooter>
     <template #left>
-      <p class="text-muted text-sm">Copyright © {{ new Date().getFullYear() }} Silas</p>
+      <p class="text-muted text-sm">
+        Copyright © {{ new Date().getFullYear() }} Silas
+      </p>
     </template>
 
     <template #right>
