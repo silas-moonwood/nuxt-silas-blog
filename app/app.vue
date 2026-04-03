@@ -8,7 +8,8 @@ import {
   Nav,
   NavMobile,
   NavMobileList,
-  SmoothScroll
+  SmoothScroll,
+  Background
 } from '~/components'
 import { useNavMobileProvider, useNavMobileState } from '~/components/nav/useNavMobile'
 
@@ -33,6 +34,7 @@ function handleNavMobileListItemClick() {
     <SmoothScroll>
       <UApp>
         <NuxtLayout class="relative">
+          <Background />
           <Header>
             <Logo />
             <ClientOnly>
@@ -51,7 +53,6 @@ function handleNavMobileListItemClick() {
               </Nav>
             </ClientOnly>
           </Header>
-          <!-- <Cursor /> -->
           <main class="pb-4">
             <NuxtPage />
           </main>

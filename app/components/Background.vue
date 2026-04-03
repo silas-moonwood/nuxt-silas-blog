@@ -28,24 +28,9 @@ const props = withDefaults(defineProps<Props>(), {
     />
 
     <!-- 视频背景 -->
-    <video
-      v-if="video"
-      class="bg video"
-      autoplay
-      muted
-      loop
-      playsinline
-      :style="{ opacity }"
-    >
+    <video v-if="video" class="bg video" autoplay muted loop playsinline :style="{ opacity }">
       <source :src="video" />
     </video>
-
-    <!-- 遮罩 -->
-    <div
-      v-if="overlay"
-      class="overlay"
-      :style="{ background: overlay }"
-    />
   </div>
 </template>
 
@@ -55,6 +40,9 @@ const props = withDefaults(defineProps<Props>(), {
   inset: 0;
   z-index: -1;
   overflow: hidden;
+  background-image: radial-gradient(transparent 2px, #e9e8e8 2px);
+  backdrop-filter: saturate(50%) blur(4px);
+  background-size: 4px 4px;
 }
 
 .bg {
