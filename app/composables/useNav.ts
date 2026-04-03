@@ -1,4 +1,4 @@
-import { navConfig } from '@/config/nav'
+import { navConfig } from '~/config/nav'
 
 export const useNav = () => {
   const { t } = useI18n()

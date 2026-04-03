@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDevice } from '@/composables'
+import { useDevice } from '~/composables'
 import {
   Footer,
   Header,
@@ -8,7 +8,7 @@ import {
   Nav,
   NavMobile,
   NavMobileList,
-  SmoothScroll,
+  SmoothScroll
 } from '~/components'
 import { useNavMobileProvider, useNavMobileState } from '~/components/nav/useNavMobile'
 
@@ -17,7 +17,7 @@ const { isMobile } = useDevice()
 
 useSeoMeta({
   title: () => t('app.title'),
-  description: () => t('app.description'),
+  description: () => t('app.description')
 })
 
 useNavMobileProvider()
