@@ -9,7 +9,8 @@ import {
   NavMobile,
   NavMobileList,
   SmoothScroll,
-  Background
+  Background,
+  SoundSwitch
 } from '~/components'
 import { useNavMobileProvider, useNavMobileState } from '~/components/nav/useNavMobile'
 
@@ -46,6 +47,7 @@ function handleNavMobileListItemClick() {
               <Nav v-else>
                 <template #right>
                   <UColorModeSwitch />
+                  <SoundSwitch />
                 </template>
                 <template #left>
                   <LocaleSelect />

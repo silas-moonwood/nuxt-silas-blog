@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useEventListener } from '@vueuse/core'
 import { useSound } from '@vueuse/sound'
+import { useSoundState } from './useSound'
 
 interface Props {
   src?: string
@@ -11,10 +12,12 @@ const props = withDefaults(defineProps<Props>(), {
   event: 'click'
 })
 
+const { isSoundOn } = useSoundState()
 const containerRef = useTemplateRef<HTMLDivElement>('containerRef')
+
 const { play } = useSound(props.src)
 useEventListener(containerRef, props.event, () => {
-  play()
+  if (isSoundOn.value) play()
 })
 </script>
 
