@@ -3,14 +3,12 @@ interface Props {
   src?: string
   video?: string
   blur?: number
-  overlay?: string
   opacity?: number
 }
 
 const props = withDefaults(defineProps<Props>(), {
   blur: 0,
-  opacity: 1,
-  overlay: 'rgba(0,0,0,0.3)'
+  opacity: 1
 })
 </script>
 
@@ -43,6 +41,10 @@ const props = withDefaults(defineProps<Props>(), {
   background-image: radial-gradient(transparent 2px, #e9e8e8 2px);
   backdrop-filter: saturate(50%) blur(4px);
   background-size: 4px 4px;
+}
+
+.dark .bg-wrapper {
+  background-image: radial-gradient(transparent 2px, #333 2px);
 }
 
 .bg {
