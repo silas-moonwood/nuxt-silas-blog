@@ -9,11 +9,12 @@ const handleChangeSound = () => {
 </script>
 
 <template>
-  <Icon
-    @click="handleChangeSound"
-    :class="{ 'is-sound-on': isSoundOn, 'is-sound-off': !isSoundOn }"
-    name="emojione-v1:bull-horn"
-  />
+  <UButton variant="ghost" @click="handleChangeSound">
+    <Icon
+      :class="{ 'is-sound-on': isSoundOn, 'is-sound-off': !isSoundOn }"
+      name="emojione-v1:bull-horn"
+    />
+  </UButton>
 </template>
 
 <style scoped>
@@ -27,7 +28,7 @@ const handleChangeSound = () => {
   &::after {
     content: '';
     position: absolute;
-    transform: rotate(45deg) translate(123%, -36%);
+    transform: rotate(45deg) translate(-100%, 0%);
     width: 0.2rem;
     height: 1.4rem;
     color: #000000;

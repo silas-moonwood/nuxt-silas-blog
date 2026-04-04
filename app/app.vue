@@ -34,6 +34,7 @@ function handleNavMobileListItemClick() {
   <div class="h-screen">
     <SmoothScroll>
       <UApp>
+        <NuxtRouteAnnouncer />
         <NuxtLayout class="relative">
           <Background />
           <Header>

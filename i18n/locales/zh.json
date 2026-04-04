@@ -8,6 +8,7 @@
   },
   "app": {
     "title": "Silas 的小窝",
+    "titleA11y": "返回首页",
     "description": "关于 Silas 的小窝",
     "empty": {
       "title": "这里还什么都没有",

@@ -8,6 +8,7 @@
   },
   "app": {
     "title": "Silas's Little Nest",
+    "titleA11y": "return to home page",
     "description": "A blog about programming, technology, and life.",
     "empty": {
       "title": "This section is empty right now",

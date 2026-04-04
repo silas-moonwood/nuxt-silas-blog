@@ -31,6 +31,7 @@
     "@types/node": "^25.5.2",
     "@types/nprogress": "^0.2.3",
     "cspell": "^9.7.0",
-    "nuxt-icon": "1.0.0-beta.7"
+    "nuxt-icon": "1.0.0-beta.7",
+    "nuxt-purgecss": "^2.0.0"
   }
 }

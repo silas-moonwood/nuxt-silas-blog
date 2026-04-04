@@ -6,7 +6,7 @@ NProgress.configure({
   trickleSpeed: 100
 })
 
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin((_nuxtApp) => {
   const router = useRouter()
 
   router.beforeEach(() => {

@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     'lenis/nuxt',
     'nuxt-gtag',
     '@vueuse/nuxt',
-    '@nuxt/a11y'
+    '@nuxt/a11y',
+    'nuxt-purgecss'
   ],
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
