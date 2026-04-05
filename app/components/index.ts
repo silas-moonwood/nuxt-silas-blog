@@ -8,6 +8,8 @@ export { default as Header } from './Header.vue'
 export { default as LocaleSelect } from './LocaleSelect.vue'
 export { default as Footer } from './Footer.vue'
 export { default as Empty } from './Empty.vue'
+export { default as Rain } from './Rain.vue'
+export { default as Wave } from './Wave.vue'
 
 // components and composables function
 export * from './nav'
