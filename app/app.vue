@@ -36,6 +36,7 @@ function handleNavMobileListItemClick() {
     <SmoothScroll>
       <UApp>
         <NuxtRouteAnnouncer />
+        <SoundRain />
         <NuxtLayout class="relative">
           <Background />
           <Header>

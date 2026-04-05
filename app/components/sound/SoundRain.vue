@@ -1,24 +1,24 @@
 <script setup lang="ts">
-// import { useAudio } from '~/composables'
+import { useSoundState } from './useSound'
 
 const audioRef = useTemplateRef('audioRef')
 
-const { playing, currentTime, duration } = useMediaControls(audioRef, {
+const { isSoundOn } = useSoundState()
+const { playing } = useMediaControls(audioRef, {
   src: '/sounds/rain-bgm-2.mp3'
 })
 
-const handlePlayChange = () => {
-  playing.value = !playing.value
-  console.log(playing.value)
-}
+watch(isSoundOn, (newVal) => {
+  if (newVal) {
+    playing.value = true
+  } else {
+    playing.value = false
+  }
+})
 </script>
 
 <template>
   <div>
     <audio ref="audioRef" loop />
-    <span>{{ currentTime }} / {{ duration }}</span>
-    <UButton @click="handlePlayChange">
-      {{ playing ? '暂停' : '播放' }}
-    </UButton>
   </div>
 </template>
