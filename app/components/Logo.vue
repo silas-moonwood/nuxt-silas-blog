@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const localePath = useLocalePath()
 // 确保服务端/客户端路径一致
 const logoSrc = computed(() => {
   return `/avatar.png`
@@ -7,7 +8,7 @@ const logoSrc = computed(() => {
 </script>
 
 <template>
-  <NuxtLink to="/" aria-label="">
+  <NuxtLink :to="localePath('/')" aria-label="">
     <div class="flex items-center">
       <img
         class="h-20 w-20 rounded-full"
