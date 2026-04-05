@@ -1,5 +1,5 @@
 export const useSoundState = () => {
-  const isSoundOn = useState('isSoundOn', () => true)
+  const isSoundOn = useState('isSoundOn', () => false)
 
   const toggleSound = () => {
     isSoundOn.value = !isSoundOn.value

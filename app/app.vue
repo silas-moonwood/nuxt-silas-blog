@@ -10,7 +10,8 @@ import {
   NavMobileList,
   SmoothScroll,
   Background,
-  SoundSwitch
+  SoundSwitch,
+  SoundRain
 } from '~/components'
 import { useNavMobileProvider, useNavMobileState } from '~/components/nav/useNavMobile'
 

@@ -64,6 +64,9 @@ export default defineNuxtConfig({
       ]
     }
   },
+  typescript: {
+    typeCheck: true
+  },
 
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
