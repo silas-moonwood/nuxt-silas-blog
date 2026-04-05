@@ -2,6 +2,10 @@
   "name": "nuxt-silas-blog",
   "type": "module",
   "private": true,
+  "author": {
+    "name": "Silas",
+    "email": "frogfrog7423@gmail.com"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
