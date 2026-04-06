@@ -10,3 +10,4 @@ Slideover
 gsap
 oxfmt
 oxlint
+lintignore
