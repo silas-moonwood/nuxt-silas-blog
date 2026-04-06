@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import { SoundContainer } from '~/components'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <SoundContainer>

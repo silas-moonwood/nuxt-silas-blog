@@ -1,18 +1,4 @@
 <script setup lang="ts">
-import { useDevice } from '~/composables'
-import {
-  Footer,
-  Header,
-  LocaleSelect,
-  Logo,
-  Nav,
-  NavMobile,
-  NavMobileList,
-  SmoothScroll,
-  SoundSwitch,
-  SoundRain,
-  Rain
-} from '~/components'
 import { useNavMobileProvider, useNavMobileState } from '~/components/nav/useNavMobile'
 
 const { t } = useI18n()

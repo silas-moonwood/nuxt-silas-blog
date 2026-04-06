@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref } from 'vue'
 import { gsap } from 'gsap'
 
 interface Props {
@@ -32,9 +31,7 @@ function generateWavePath(offset = 0) {
 
   for (let i = 0; i <= points; i++) {
     const x = i * segment
-    const y =
-      height +
-      Math.sin((i + offset) * 0.8) * amplitude
+    const y = height + Math.sin((i + offset) * 0.8) * amplitude
 
     path += ` L ${x} ${y}`
   }
@@ -47,21 +44,21 @@ function generateWavePath(offset = 0) {
 onMounted(() => {
   let offset = 0
 
-  animation = gsap.to({}, {
-    duration: props.speed,
-    repeat: -1,
-    ease: 'linear',
-    onUpdate: () => {
-      offset += 0.02
+  animation = gsap.to(
+    {},
+    {
+      duration: props.speed,
+      repeat: -1,
+      ease: 'linear',
+      onUpdate: () => {
+        offset += 0.02
 
-      if (pathRef.value) {
-        pathRef.value.setAttribute(
-          'd',
-          generateWavePath(offset)
-        )
+        if (pathRef.value) {
+          pathRef.value.setAttribute('d', generateWavePath(offset))
+        }
       }
     }
-  })
+  )
 })
 
 onBeforeUnmount(() => {
@@ -70,13 +67,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <svg
-    class="wave"
-    :style="{ width: '100%', height: height + 'px' }"
-  >
-    <path
-      ref="pathRef"
-      :fill="color"
-    />
+  <svg class="wave" :style="{ width: '100%', height: height + 'px' }">
+    <path ref="pathRef" :fill="color" />
   </svg>
 </template>

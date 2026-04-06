@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Empty } from '~/components'
 const { t } = useI18n()
 
 useHead({

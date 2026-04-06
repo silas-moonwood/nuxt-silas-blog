@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { LocaleSelect } from '~/components'
-
 const { nav } = useNav()
 const emit = defineEmits<{
   (e: 'click', item: { path: string }): void

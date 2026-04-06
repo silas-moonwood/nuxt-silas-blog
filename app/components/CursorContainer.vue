@@ -1,7 +1,4 @@
-<!-- components/CursorContainer.vue -->
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref } from 'vue'
-
 const containerRef = ref<HTMLElement | null>(null)
 
 let cursorEl: HTMLElement | null = null

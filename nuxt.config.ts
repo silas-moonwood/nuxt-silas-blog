@@ -19,17 +19,14 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4
   },
-  ui: {
-    experimental: {
-      // componentDetection: true
-    }
-  },
+
   colorMode: {
     classSuffix: '', // 不要 -mode 后缀（推荐）
     preference: 'system', // 默认跟随系统
     fallback: 'light', // 系统不支持时
     storageKey: 'nuxt-color-mode'
   },
+
   i18n: {
     strategy: 'prefix_except_default',
     defaultLocale: 'en',
@@ -51,11 +48,13 @@ export default defineNuxtConfig({
       fallbackLocale: 'en'
     }
   },
+
   a11y: {
     enabled: process.env.NODE_ENV === 'development',
     logIssues: true,
     defaultHighlight: true
   },
+
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {
@@ -64,8 +63,13 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   typescript: {
     typeCheck: true
+  },
+
+  imports: {
+    dirs: ['~/components/**/**']
   },
 
   app: {
