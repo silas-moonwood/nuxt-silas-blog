@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useNavMobileState } from './useNavMobile'
 const { open } = useNavMobileState()!
 const { t } = useI18n()
 </script>

@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import { SoundContainer } from '~/components'
+const b = 'b'
+const d = 'd'
+const obj = {
+  b,
+  d
+}
 </script>
 
 <template>
@@ -7,7 +12,7 @@ import { SoundContainer } from '~/components'
     <header
       ref="headerRef"
       v-backdrop
-      class="border-b border-[#e9e8e8] dark:border-[#333] flex justify-between items-center px-6 sticky top-0 z-10"
+      class="sticky top-0 z-10 flex items-center justify-between border-b border-[#e9e8e8] px-6 dark:border-[#333]"
     >
       <slot />
     </header>

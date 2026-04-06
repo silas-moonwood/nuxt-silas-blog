@@ -10,8 +10,7 @@ export default defineNuxtConfig({
     'lenis/nuxt',
     'nuxt-gtag',
     '@vueuse/nuxt',
-    '@nuxt/a11y',
-    'nuxt-purgecss'
+    '@nuxt/a11y'
   ],
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -19,43 +18,43 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4
   },
-  ui: {
-    experimental: {
-      // componentDetection: true
-    }
-  },
+
   colorMode: {
     classSuffix: '', // 不要 -mode 后缀（推荐）
     preference: 'system', // 默认跟随系统
     fallback: 'light', // 系统不支持时
     storageKey: 'nuxt-color-mode'
   },
+
   i18n: {
     strategy: 'prefix_except_default',
     defaultLocale: 'en',
-    locales: [
-      {
-        code: 'en',
-        name: 'English',
-        file: 'en.json'
-      },
-      {
-        code: 'zh-CN',
-        name: '中文',
-        file: 'zh.json'
-      }
-    ],
+    langDir: 'locales',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
       fallbackLocale: 'en'
-    }
+    },
+    locales: [
+      {
+        code: 'en',
+        name: 'English',
+        files: ['en/app.json', 'en/page.json']
+      },
+      {
+        code: 'zh-CN',
+        name: '中文',
+        files: ['zh/app.json', 'zh/page.json']
+      }
+    ]
   },
+
   a11y: {
     enabled: process.env.NODE_ENV === 'development',
     logIssues: true,
     defaultHighlight: true
   },
+
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {
@@ -64,8 +63,13 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   typescript: {
     typeCheck: true
+  },
+
+  imports: {
+    dirs: ['~/components/**/**']
   },
 
   app: {

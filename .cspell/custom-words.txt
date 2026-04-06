@@ -8,3 +8,6 @@ vueuse
 USlideover
 Slideover
 gsap
+oxfmt
+oxlint
+lintignore

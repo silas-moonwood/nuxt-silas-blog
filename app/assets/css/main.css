@@ -4,7 +4,6 @@
 @import './nprogress.css';
 @import './scrollbar.css';
 
-
 @font-face {
   font-family: 'Smiley';
   src: url('fonts/smiley/SmileySans-Oblique.otf.woff2') format('woff2');
@@ -20,6 +19,3 @@ body::selection {
   background-color: rgb(0, 193, 106);
   color: #fff;
 }
-
-
-

@@ -64,5 +64,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <canvas ref="canvasRef" class="fixed top-0 left-0 w-full h-full pointer-events-none" />
+  <canvas ref="canvasRef" class="pointer-events-none fixed top-0 left-0 h-full w-full" />
 </template>

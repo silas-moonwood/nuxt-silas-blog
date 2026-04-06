@@ -1,17 +1,22 @@
 {
   "name": "nuxt-silas-blog",
-  "type": "module",
   "private": true,
   "author": {
     "name": "Silas",
     "email": "frogfrog7423@gmail.com"
   },
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview --port 4000",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "knip": "knip"
   },
   "dependencies": {
     "@nuxt/a11y": "1.0.0-alpha.1",
@@ -36,8 +41,12 @@
     "@types/node": "^25.5.2",
     "@types/nprogress": "^0.2.3",
     "cspell": "^9.7.0",
+    "knip": "^6.3.0",
     "nuxt-icon": "1.0.0-beta.7",
-    "nuxt-purgecss": "^2.0.0",
+    "oxfmt": "^0.43.0",
+    "oxlint": "^1.58.0",
+    "typescript": "^6.0.2",
     "vue-tsc": "^3.2.6"
-  }
+  },
+  "packageManager": "pnpm@10.33.0"
 }

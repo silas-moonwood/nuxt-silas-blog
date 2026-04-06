@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { gsap } from 'gsap'
 import { useEventListener } from '@vueuse/core'
+import { gsap } from 'gsap'
 
 const { t } = useI18n()
 const localePath = useLocalePath()

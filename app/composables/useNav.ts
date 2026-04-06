@@ -6,10 +6,9 @@ export const useNav = () => {
   const nav = computed(() =>
     navConfig.map((item) => ({
       ...item,
-      label: t(`nav.${item.key}`)
+      label: t(`app.nav.${item.key}`)
     }))
   )
-
   return {
     nav
   }

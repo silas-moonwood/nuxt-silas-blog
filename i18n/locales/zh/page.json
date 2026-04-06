@@ -1,0 +1,17 @@
+{
+  "page": {
+    "home": {
+      "hi": "你好，我是 Silas 或 Froggy , 你可以这样叫我",
+      "title": "首页"
+    },
+    "blog": {
+      "title": "博客"
+    },
+    "about": {
+      "title": "关于"
+    },
+    "projects": {
+      "title": "项目"
+    }
+  }
+}

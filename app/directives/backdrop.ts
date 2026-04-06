@@ -11,7 +11,7 @@ export default {
 
     // 可选：自动加透明背景
     if (!el.style.background) {
-      // el.style.background = 'rgba(255,255,255,0.2)'  
+      // el.style.background = 'rgba(255,255,255,0.2)'
     }
   }
 }
