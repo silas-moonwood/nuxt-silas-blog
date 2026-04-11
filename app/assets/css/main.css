@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+@import './transition.css';
+@import './nprogress.css';
+@import './scrollbar.css';
+
+@font-face {
+  font-family: 'Smiley';
+  src: url('fonts/smiley/SmileySans-Oblique.otf.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Google Sans Code', 'Google Sans', 'Inter';
+}
+
+body::selection {
+  background-color: rgb(0, 193, 106);
+  color: #fff;
+}

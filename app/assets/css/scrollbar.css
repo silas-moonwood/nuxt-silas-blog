@@ -1,0 +1,22 @@
+/* 整体滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* 滑块 */
+::-webkit-scrollbar-thumb {
+  background: rgba(95, 92, 92, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+/* 悬浮 */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.8);
+}
+
+/* 轨道 */
+::-webkit-scrollbar-track {
+  background: transparent;
+}

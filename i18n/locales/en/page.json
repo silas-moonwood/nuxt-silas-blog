@@ -1,0 +1,17 @@
+{
+  "page": {
+    "home": {
+      "hi": "Hi, I am Silas or Froggy , you can call me",
+      "title": "Home"
+    },
+    "blog": {
+      "title": "Blog"
+    },
+    "about": {
+      "title": "About"
+    },
+    "projects": {
+      "title": "Projects"
+    }
+  }
+}

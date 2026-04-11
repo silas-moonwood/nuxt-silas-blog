@@ -1,0 +1,66 @@
+<script setup lang="ts">
+interface Props {
+  src?: string
+  video?: string
+  blur?: number
+  opacity?: number
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  blur: 0,
+  opacity: 1
+})
+</script>
+
+<template>
+  <div class="bg-wrapper">
+    <!-- 图片背景 -->
+    <div
+      v-if="src"
+      class="bg"
+      :style="{
+        backgroundImage: `url(${src})`,
+        filter: `blur(${blur}px)`,
+        opacity
+      }"
+    />
+
+    <!-- 视频背景 -->
+    <video v-if="video" class="bg video" autoplay muted loop playsinline :style="{ opacity }">
+      <source :src="video" />
+    </video>
+  </div>
+</template>
+
+<style scoped>
+.bg-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background-image: radial-gradient(transparent 2px, #e9e8e8 2px);
+  backdrop-filter: saturate(50%) blur(4px);
+  background-size: 4px 4px;
+}
+
+.dark .bg-wrapper {
+  background-image: radial-gradient(transparent 2px, #333 2px);
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05); /* 防止 blur 边缘露白 */
+}
+
+.video {
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+}
+</style>

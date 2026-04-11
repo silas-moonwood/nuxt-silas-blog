@@ -1,0 +1,23 @@
+{
+  "app": {
+    "title": "Silas 的小屋",
+    "description": "关于编程、技术、生活的博客",
+    "empty": {
+      "title": "当前页面为空",
+      "description": "敬请期待后面我的新内容"
+    },
+    "nav": {
+      "home": "首页",
+      "blog": "博客",
+      "about": "关于",
+      "projects": "项目",
+      "me": "我",
+      "mobile": {
+        "menu": {
+          "title": "菜单",
+          "description": "导航到网站的不同部分"
+        }
+      }
+    }
+  }
+}

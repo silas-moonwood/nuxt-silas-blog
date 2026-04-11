@@ -1,0 +1,15 @@
+nuxtjs
+gtag
+nprogress
+nuxt
+entypo
+lucide
+vueuse
+USlideover
+Slideover
+gsap
+oxfmt
+oxlint
+lintignore
+focusable
+moonwood
