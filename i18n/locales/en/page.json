@@ -1,17 +1,15 @@
 {
-  "page": {
-    "home": {
-      "hi": "Hi, I am Silas or Froggy , you can call me",
-      "title": "Home"
-    },
-    "blog": {
-      "title": "Blog"
-    },
-    "about": {
-      "title": "About"
-    },
-    "projects": {
-      "title": "Projects"
-    }
+  "home": {
+    "hi": "你好，我是 Silas 或 Froggy , 你可以这样叫我",
+    "title": "Home"
+  },
+  "blog": {
+    "title": "Blog"
+  },
+  "about": {
+    "title": "About"
+  },
+  "projects": {
+    "title": "Projects"
   }
 }
