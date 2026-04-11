@@ -2,22 +2,22 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxtjs/i18n',
-    '@nuxt/ui',
-    'nuxt-icon',
-    '@nuxtjs/color-mode',
-    'lenis/nuxt',
-    'nuxt-gtag',
-    '@vueuse/nuxt',
-    '@nuxt/a11y'
-  ],
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
   future: {
     compatibilityVersion: 4
   },
+  modules: [
+    '@nuxtjs/i18n',
+    '@nuxt/ui',
+    '@nuxtjs/color-mode',
+    'lenis/nuxt',
+    'nuxt-gtag',
+    '@vueuse/nuxt',
+    '@nuxt/a11y',
+    '@nuxt/icon'
+  ],
 
   colorMode: {
     classSuffix: '', // 不要 -mode 后缀（推荐）
@@ -39,12 +39,12 @@ export default defineNuxtConfig({
       {
         code: 'en',
         name: 'English',
-        files: ['en/app.json', 'en/page.json']
+        files: ['en/index.ts']
       },
       {
         code: 'zh-CN',
         name: '中文',
-        files: ['zh/app.json', 'zh/page.json']
+        files: ['zh/index.ts']
       }
     ]
   },
@@ -65,7 +65,7 @@ export default defineNuxtConfig({
   },
 
   typescript: {
-    typeCheck: true
+    // typeCheck: true
   },
 
   imports: {

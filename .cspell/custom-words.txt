@@ -13,3 +13,5 @@ oxlint
 lintignore
 focusable
 moonwood
+tsgolint
+iconify
