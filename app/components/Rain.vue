@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { useEventListener } from '@vueuse/core'
+
+const colorMode = useColorMode()
+const rainColor = shallowRef(colorMode.preference)
+
 const canvasRef = ref<HTMLCanvasElement | null>(null)
 
 onMounted(() => {
@@ -14,12 +19,16 @@ onMounted(() => {
   }
 
   resize()
-  window.addEventListener('resize', resize)
+  useEventListener(window, 'resize', resize)
 
   const w = canvas.width
   const h = canvas.height
 
-  ctx.strokeStyle = 'rgba(174,194,224,0.5)'
+  watchEffect(() => {
+    rainColor.value = colorMode.preference
+    ctx.strokeStyle = rainColor.value === 'dark' ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.3)'
+  })
+
   ctx.lineWidth = 3
   ctx.lineCap = 'round'
 
