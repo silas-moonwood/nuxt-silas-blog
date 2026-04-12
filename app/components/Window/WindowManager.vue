@@ -1,3 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { windows } = useWindowManager()
+</script>
 
-<template></template>
+<template>
+  <WindowItem v-for="win in windows" :key="win.id" :win="win" />
+</template>

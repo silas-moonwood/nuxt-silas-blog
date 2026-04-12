@@ -34,6 +34,11 @@ function handleNavMobileListItemClick() {
         <AppLoading />
         <NuxtLayout class="relative">
           <Background />
+
+          <Teleport to="body">
+            <WindowManager />
+          </Teleport>
+
           <Header>
             <Logo />
             <ClientOnly>

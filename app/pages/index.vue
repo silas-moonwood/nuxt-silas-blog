@@ -8,10 +8,20 @@ useSeoMeta({
   ogDescription: t('app.description'),
   twitterDescription: t('app.description')
 })
+const { openWindow } = _useWindowManager()
 </script>
 
 <template>
   <div class="my-12 flex flex-col items-center justify-center px-12">
     <UPageHero title="Silas or Froggy" :description="$t('page.home.hi')" />
+    <UButton
+      @click="
+        openWindow({
+          id: Date.now().toString(),
+          title: 'Test Window'
+        })
+      "
+      >Open Window</UButton
+    >
   </div>
 </template>

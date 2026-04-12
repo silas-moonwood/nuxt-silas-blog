@@ -2,32 +2,38 @@
 import { useWindowSize } from '@vueuse/core'
 import Vue3DraggableResizable from 'vue3-draggable-resizable'
 
-const { isOpen } = useWindowManager()
-const { width, height } = useWindowSize()
+interface Props {
+  win: Omit<WindowInstance, 'component'>
+}
+
+const { width: initWidth, height: initHeight } = useWindowSize()
+const props = defineProps<Props>()
+
+const { closeWindow } = useWindowManager()
+
+const active = ref(false)
+
+const close = () => {
+  closeWindow(props.win.id)
+}
+
 function print(val: string) {
   console.log(val)
 }
-
-const { x, y, h, w } = reactive({
-  x: 100,
-  y: 100,
-  h: 100,
-  w: 100
-})
 </script>
 
 <template>
   <ClientOnly>
     <Vue3DraggableResizable
-      :initW="width / 1.5"
-      :min-w="width / 1.5"
-      :initH="height / 1.5"
-      :min-h="height / 1.5"
-      v-model:x="x"
-      v-model:y="y"
-      v-model:w="w"
-      v-model:h="h"
-      v-model:active="isOpen"
+      :initW="initWidth / 1.5"
+      :min-w="initWidth / 1.5"
+      :initH="initHeight / 1.5"
+      :min-h="initHeight / 1.5"
+      v-model:x="win.x"
+      v-model:y="win.y"
+      v-model:w="win.w"
+      v-model:h="win.h"
+      v-model:active="active"
       :draggable="true"
       :resizable="true"
       classNameActive="bg-primary"
@@ -45,8 +51,8 @@ const { x, y, h, w } = reactive({
     >
       <div class="bg-default h-full w-full">
         <div class="border-default flex items-center justify-between border-b px-4 py-2">
-          <div class="">This is a test example</div>
-          <Icon class="cursor-pointer" name="ic:twotone-cancel" />
+          <div class="">{{ win.title }}</div>
+          <Icon class="cursor-pointer" role="button" @click="close" name="ic:twotone-cancel" />
         </div>
         <div>
           <slot body />
