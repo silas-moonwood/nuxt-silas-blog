@@ -72,9 +72,7 @@ export default defineNuxtConfig({
     }
   },
 
-  typescript: {
-    // typeCheck: true
-  },
+  typescript: {},
 
   imports: {
     dirs: ['~/components/**/**']

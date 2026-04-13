@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import VerticalHeader from '~/components/Header/VerticalHeader.vue'
 const { t } = useI18n()
 const { isMobile } = useDevice()
+const { dock } = useHeaderDock()
 
 useSeoMeta({
   title: t('app.title'),
@@ -25,47 +27,7 @@ function handleNavMobileListItemClick() {
 </script>
 
 <template>
-  <div class="h-screen">
-    <SmoothScroll>
-      <UApp>
-        <NuxtRouteAnnouncer />
-        <Rain />
-        <SoundRain />
-
-        <NuxtLayout class="relative">
-          <Background />
-
-          <Teleport to="body">
-            <AppLoading />
-            <WindowManager />
-          </Teleport>
-
-          <Header>
-            <Logo />
-            <ClientOnly>
-              <NavMobile v-if="isMobile">
-                <template #body>
-                  <NavMobileList @click="handleNavMobileListItemClick" />
-                </template>
-              </NavMobile>
-              <Nav v-else>
-                <template #left>
-                  <LocaleSelect />
-                </template>
-                <template #right>
-                  <UColorModeSwitch />
-                  <SoundSwitch />
-                </template>
-              </Nav>
-            </ClientOnly>
-          </Header>
-          <main class="pb-4">
-            <NuxtLoadingIndicator :height="3" color="#3b82f6" />
-            <NuxtPage />
-          </main>
-        </NuxtLayout>
-        <Footer />
-      </UApp>
-    </SmoothScroll>
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>

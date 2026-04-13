@@ -38,13 +38,15 @@ onMounted(() => {
     return clamp(byArea, 150, 900)
   }
 
-  const createParticle = (): Particle => ({
-    x: Math.random() * state.w,
-    y: Math.random() * state.h,
-    l: Math.random() * 1,
-    xs: -4 + Math.random() * 4 + 2,
-    ys: Math.random() * 10 + 10
-  })
+  const createParticle = (): Particle => () => {
+    return {
+      x: Math.random() * state.w,
+      y: Math.random() * state.h,
+      l: Math.random() * 1,
+      xs: -4 + Math.random() * 4 + 2,
+      ys: Math.random() * 10 + 10
+    }
+  }
 
   const resize = () => {
     const dpr = Math.max(1, window.devicePixelRatio || 1)

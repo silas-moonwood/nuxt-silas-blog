@@ -17,8 +17,8 @@ const { openWindow } = useWindowManager()
 
 type OpenPageWindowType = 'blog' | 'projects' | 'about'
 const openPageWindow = (key: OpenPageWindowType) => {
-  let component, title
-  title = t(`page.${key}.title`)
+  let component
+  const title = t(`page.${key}.title`)
 
   if (key === 'blog') component = BlogPage
   if (key === 'projects') component = ProjectsPage
