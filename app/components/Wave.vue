@@ -17,7 +17,7 @@ const props = withDefaults(defineProps<Props>(), {
   color: '#3b82f6'
 })
 
-const pathRef = ref<SVGPathElement | null>(null)
+const pathRef = useTemplateRef<SVGPathElement>('pathRef')
 let animation: gsap.core.Tween | null = null
 
 // 生成 path

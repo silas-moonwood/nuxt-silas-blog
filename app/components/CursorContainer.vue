@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const containerRef = ref<HTMLElement | null>(null)
+const containerRef = useTemplateRef<HTMLElement>('containerRef')
 
 const mouseMoveHandler = (e: MouseEvent) => {
   const rect = containerRef.value!.getBoundingClientRect()

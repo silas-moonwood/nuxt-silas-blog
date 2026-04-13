@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import BlogPage from '~/pages/about/index.vue'
 import AboutPage from '~/pages/about/index.vue'
+import BlogPage from '~/pages/blog/index.vue'
 import ProjectsPage from '~/pages/projects/index.vue'
 
 const { t } = useI18n()
+const title = computed(() => `${t('app.title')} - ${t('page.home.title')}`)
 useSeoMeta({
-  title: t(`${$t('app.title')} - ${t('page.home.title')}`),
-  ogTitle: t(`${$t('app.title')} - ${t('page.home.title')}`),
-  twitterTitle: t(`${$t('app.title')} - ${t('page.home.title')}`),
+  title,
+  ogTitle: title,
+  twitterTitle: title,
   description: t('app.description'),
   ogDescription: t('app.description'),
   twitterDescription: t('app.description')

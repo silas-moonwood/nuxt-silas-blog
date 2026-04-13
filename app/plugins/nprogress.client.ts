@@ -11,10 +11,14 @@ export default defineNuxtPlugin((_nuxtApp) => {
   const router = useRouter()
 
   router.beforeEach(() => {
-    // NProgress.start()
+    NProgress.start()
   })
 
   router.afterEach(() => {
+    NProgress.done()
+  })
+
+  router.onError(() => {
     NProgress.done()
   })
 })
