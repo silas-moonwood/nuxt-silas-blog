@@ -13,6 +13,11 @@ useSeoMeta({
   ogDescription: t('app.description'),
   twitterDescription: t('app.description')
 })
+
+definePageMeta({
+  // Layout: 'vertical-header'
+})
+
 const { openWindow } = useWindowManager()
 
 type OpenPageWindowType = 'blog' | 'projects' | 'about'

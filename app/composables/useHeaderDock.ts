@@ -1,5 +1,4 @@
-export type HeaderDock = 'left' | 'right'
-
+export type HeaderDock = 'left' | 'right' | 'center'
 export function useHeaderDock() {
   const dock = useState<HeaderDock>('headerDock', () => 'right')
 
@@ -7,9 +6,8 @@ export function useHeaderDock() {
     dock.value = next
   }
 
-  const toggleHeaderDock = () => {
-    dock.value = dock.value === 'left' ? 'right' : 'left'
+  return {
+    dock,
+    setHeaderDock
   }
-
-  return { dock, setHeaderDock, toggleHeaderDock }
 }

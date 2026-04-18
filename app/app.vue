@@ -17,7 +17,22 @@ useSeoMeta({
 </script>
 
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <Teleport to="body">
+    <AppLoading />
+    <WindowManager />
+    <Background />
+    <Rain />
+    <SoundRain />
+  </Teleport>
+
+  <div>
+    <SmoothScroll>
+      <UApp>
+        <NuxtRouteAnnouncer />
+        <NuxtLayout>
+          <NuxtPage />
+        </NuxtLayout>
+      </UApp>
+    </SmoothScroll>
+  </div>
 </template>
