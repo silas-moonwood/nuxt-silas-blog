@@ -18,5 +18,10 @@ export const navConfig = [
     key: 'about',
     path: '/about',
     icon: 'i-lucide-info-circle'
+  },
+  {
+    key: 'settings',
+    path: '/settings',
+    icon: 'i-lucide-info-circle'
   }
 ]

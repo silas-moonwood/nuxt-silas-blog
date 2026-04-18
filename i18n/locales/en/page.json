@@ -1,15 +1,23 @@
 {
-  "home": {
-    "hi": "Hello, I'm Silas or Froggy, you can call me that.",
-    "title": "Home"
+  "about": {
+    "title": "About"
   },
   "blog": {
     "title": "Blog"
   },
-  "about": {
-    "title": "About"
+  "home": {
+    "hi": "Hello, I'm Silas or Froggy, you can call me that.",
+    "title": "Home"
   },
   "projects": {
     "title": "Projects"
+  },
+  "settings": {
+    "title": "Settings",
+    "header": {
+      "value": "Header",
+      "vertical": "Vertical",
+      "horizontal": "Horizontal"
+    }
   }
 }

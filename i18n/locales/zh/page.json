@@ -1,15 +1,23 @@
 {
-  "home": {
-    "hi": "你好，我是 Silas 或 Froggy , 你可以这样叫我",
-    "title": "首页"
+  "about": {
+    "title": "关于"
   },
   "blog": {
     "title": "博客"
   },
-  "about": {
-    "title": "关于"
+  "home": {
+    "hi": "你好，我是 Silas 或 Froggy , 你可以这样叫我",
+    "title": "首页"
   },
   "projects": {
     "title": "项目"
+  },
+  "settings": {
+    "title": "设置",
+    "header": {
+      "value": "页眉",
+      "vertical": "垂直",
+      "horizontal": "水平"
+    }
   }
 }
