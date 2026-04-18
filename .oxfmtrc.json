@@ -8,6 +8,4 @@
   "sortImports": true,
   "sortTailwindcss": true,
   "jsdoc": true
-  // "bracketSameLine": true,
-  // "arrowParens": "avoid"
 }
