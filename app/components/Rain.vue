@@ -38,7 +38,7 @@ onMounted(() => {
     return clamp(byArea, 150, 900)
   }
 
-  const createParticle = (): Particle => () => {
+  const createParticle = (): Particle => {
     return {
       x: Math.random() * state.w,
       y: Math.random() * state.h,
