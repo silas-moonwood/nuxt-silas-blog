@@ -1,7 +1,4 @@
-<script setup lang="ts">
-import HorizontalContentHeader from '~/components/Header/HorizontalContentHeader.vue'
-import HorizontalHeader from '~/components/Header/HorizontalHeader.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="relative min-h-dvh w-full overflow-hidden">

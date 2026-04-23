@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import VerticalContentHeader from '~/components/Header/VerticalContentHeader.vue'
-import VerticalHeader from '~/components/Header/VerticalHeader.vue'
 const { dock } = useHeaderDock()
 
 useNavMobileProvider()
