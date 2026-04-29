@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { set } from 'nprogress'
-
 import AboutPage from '~/pages/about/index.vue'
 import BlogPage from '~/pages/blog/index.vue'
 import ProjectsPage from '~/pages/projects/index.vue'
