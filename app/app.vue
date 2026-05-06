@@ -18,7 +18,7 @@ useSeoMeta({
 
 <template>
   <Teleport to="body">
-    <AppLoading />
+    <!-- <AppLoading /> -->
     <WindowManager />
     <Background />
     <Rain />
